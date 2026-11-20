@@ -1,0 +1,49 @@
+/* welcome screen */
+
+#loader {
+  position: fixed; inset: 0; z-index: 9500;
+  display: grid; place-items: center;
+  background: #1e2a22;
+  padding: 20px;
+}
+
+.loader-inner { width: min(560px, 100%); text-align: center; }
+
+#loader-sprite {
+  width: 150px; height: 150px; object-fit: contain;
+  image-rendering: auto;
+  animation: bob 0.8s ease-out infinite;
+  filter: drop-shadow(0 6px 18px rgba(168, 211, 122, .4));
+}
+
+.loader-title {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 8vw, 3.6rem);
+  color: var(--a1);
+  margin: 18px 0; letter-spacing: 0; font-weight: 600;}
+
+.boot-log {
+  font-family: var(--body);
+  font-size: 1.35rem;
+  color: var(--a3);
+  text-align: left;
+  min-height: 7.2em;
+  white-space: pre-wrap;
+}
+
+.load-bar { height: 18px; border: 1px solid var(--border); padding: 3px; background: var(--field); margin-top: 10px; }
+
+#load-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--a1), var(--a2));
+  transition: width .35s ease-out;
+}
+
+.load-pct { font-family: var(--pixel); font-size: 1.27rem; color: var(--muted); margin: 12px 0 18px; letter-spacing: .04em; font-weight: 600;}
+
+#start-btn { animation: pulse 1.2s ease-in-out infinite; }
+
+#start-btn:hover { animation: none; }
+
+
+

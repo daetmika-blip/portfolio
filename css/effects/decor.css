@@ -1,0 +1,38 @@
+/* clouds, stars, leaves in the hero and the grass strip above the footer */
+
+.decor { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.decor img { position: absolute; display: block; }
+
+.d-cloud { opacity: .9; animation: drift 60s linear infinite alternate; }
+.c1 { width: 200px; top: 16%; right: 8%; }
+.c2 { width: 130px; top: 46%; right: 26%; animation-duration: 80s; animation-direction: alternate-reverse; opacity: .75; }
+
+.d-star { animation: twinkle 3.6s ease-in-out infinite; }
+.s1 { width: 26px; top: 24%; right: 34%; }
+.s2 { width: 18px; top: 62%; right: 10%; animation-delay: 1.2s; }
+.s3 { width: 22px; top: 12%; right: 52%; animation-delay: 2.1s; }
+
+.d-leaf { width: 34px; opacity: .85; animation: sway 6s ease-in-out infinite; }
+.l1 { top: 70%; right: 40%; }
+.l2 { top: 34%; right: 4%; width: 26px; animation-delay: 2s; }
+
+html[data-theme="night"] .d-cloud { opacity: .14; }
+html[data-theme="night"] .c2 { opacity: .1; }
+html[data-theme="night"] .d-leaf { opacity: .5; }
+
+.grass {
+  height: 90px; margin-bottom: -1px; position: relative; z-index: 2;
+  background: url("../../assets/images/grass.svg") repeat-x left bottom / auto 90px;
+}
+html[data-theme="night"] .grass { filter: brightness(.55) saturate(.8); }
+.footer { border-top: 0; }
+
+@keyframes drift { from { transform: translateX(-24px); } to { transform: translateX(30px); } }
+@keyframes twinkle { 0%, 100% { opacity: .35; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.1); } }
+@keyframes sway { 0%, 100% { transform: rotate(-12deg) translateY(0); } 50% { transform: rotate(12deg) translateY(-8px); } }
+
+@media (max-width: 720px) {
+  .c1 { width: 130px; right: 2%; }
+  .c2, .s3, .l1 { display: none; }
+  .grass { height: 60px; background-size: auto 60px; }
+}

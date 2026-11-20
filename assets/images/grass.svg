@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" width="360" height="90">
+  <!-- one tile of grass, a daisy and two mushrooms. it repeats sideways -->
+  <path d="M0 90 V62 C20 54 28 66 48 58 C68 50 78 64 100 60 C124 56 132 66 156 60 C180 54 190 66 214 60 C238 54 250 66 272 60 C296 54 306 66 326 58 C342 54 352 60 360 62 V90 Z" fill="#8fb36a"/>
+  <path d="M0 90 V72 C30 66 50 76 80 70 C120 64 150 78 190 72 C230 66 260 78 300 72 C330 68 345 72 360 72 V90 Z" fill="#79a257"/>
+  <!-- grass blades -->
+  <path d="M30 64 L26 46 L36 62 Z M40 62 L42 42 L48 62 Z M210 62 L206 44 L216 62 Z M222 62 L226 46 L230 62 Z M300 62 L296 48 L306 62 Z" fill="#6f9a55"/>
+  <!-- mushrooms -->
+  <rect x="84" y="46" width="10" height="20" rx="4" fill="#f6e5cf" stroke="#c7a98a" stroke-width="2"/>
+  <path d="M70 48 C70 30 108 30 108 48 Z" fill="#e0654e" stroke="#b9503c" stroke-width="2"/>
+  <circle cx="82" cy="41" r="3" fill="#fff8ee"/><circle cx="95" cy="38" r="2.5" fill="#fff8ee"/><circle cx="101" cy="44" r="2" fill="#fff8ee"/>
+  <rect x="124" y="54" width="7" height="14" rx="3" fill="#f6e5cf" stroke="#c7a98a" stroke-width="2"/>
+  <path d="M115 56 C115 43 140 43 140 56 Z" fill="#e0654e" stroke="#b9503c" stroke-width="2"/>
+  <circle cx="123" cy="51" r="2" fill="#fff8ee"/><circle cx="132" cy="49" r="1.8" fill="#fff8ee"/>
+  <!-- daisies -->
+  <g transform="translate(176 50)"><circle r="3.5" fill="#f2c14e"/><g fill="#fffaf1"><circle cx="0" cy="-7" r="3.6"/><circle cx="6.6" cy="-2.2" r="3.6"/><circle cx="4" cy="5.7" r="3.6"/><circle cx="-4" cy="5.7" r="3.6"/><circle cx="-6.6" cy="-2.2" r="3.6"/></g><circle r="3.2" fill="#f2c14e"/></g>
+  <g transform="translate(262 52)"><circle r="3.5" fill="#f2c14e"/><g fill="#fffaf1"><circle cx="0" cy="-7" r="3.6"/><circle cx="6.6" cy="-2.2" r="3.6"/><circle cx="4" cy="5.7" r="3.6"/><circle cx="-4" cy="5.7" r="3.6"/><circle cx="-6.6" cy="-2.2" r="3.6"/></g><circle r="3.2" fill="#f2c14e"/></g>
+  <g transform="translate(336 54)"><circle r="3.5" fill="#f2c14e"/><g fill="#fffaf1"><circle cx="0" cy="-6" r="3"/><circle cx="5.7" cy="-1.9" r="3"/><circle cx="3.5" cy="4.9" r="3"/><circle cx="-3.5" cy="4.9" r="3"/><circle cx="-5.7" cy="-1.9" r="3"/></g><circle r="2.8" fill="#f2c14e"/></g>
+</svg>

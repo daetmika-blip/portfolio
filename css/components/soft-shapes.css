@@ -1,0 +1,17 @@
+/* rounded corners. change --r for cards and --r-pill for buttons */
+
+:root { --r: 16px; --r-pill: 999px; }
+
+.btn, .mini-btn, .filter, .to-top, .admin-fab, .pad-btn { border-radius: var(--r-pill); }
+.panel, .card, .stat, .modal-card, .dlg-card, .pal-card, .terminal, .msg-card, .adm-row,
+.field input, .field textarea, .form select, .dlg-card input, .msg-reply textarea,
+.thumb, .m-thumb { border-radius: var(--r); }
+.thumb, .m-thumb { overflow: hidden; }
+.tags span, .badge, .status, kbd { border-radius: 8px; }
+.term-bar { border-radius: var(--r) var(--r) 0 0; }
+#toasts > * { border-radius: 12px; }
+.skill-bar, .load-bar, #progress { border-radius: var(--r-pill); }
+.load-bar > div, #progress span { border-radius: var(--r-pill); }
+
+/* round, soft close button on the project popup */
+.modal-close { border-radius: 50%; background: var(--panel); color: var(--a1); border-color: var(--border); box-shadow: 0 4px 14px -6px var(--shadow); }

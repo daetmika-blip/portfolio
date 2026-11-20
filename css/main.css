@@ -1,0 +1,49 @@
+/* this is the only css file index.html loads. it pulls in all the others, in order */
+
+/* base: colors, reset, effects, animations */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/effects.css");
+@import url("base/animations.css");
+@import url("base/noscript.css");
+
+/* full-screen things: boot screen, page wipe */
+@import url("screens/loader.css");
+@import url("screens/page-wipe.css");
+
+/* canvas effects */
+@import url("effects/particles.css");
+@import url("effects/cursor.css");
+
+/* layout: the frame of the page */
+@import url("layout/progress-bar.css");
+@import url("layout/header.css");
+@import url("layout/hero.css");
+@import url("layout/ticker.css");
+@import url("layout/sections.css");
+@import url("layout/footer.css");
+
+/* components: reusable pieces */
+@import url("components/buttons.css");
+@import url("components/panels.css");
+@import url("components/tags.css");
+@import url("components/admin-fab.css");
+@import url("components/soft-shapes.css");
+@import url("components/filters.css");
+@import url("components/forms.css");
+@import url("components/skip-link.css");
+@import url("components/toast.css");
+@import url("components/dialog.css");
+@import url("components/project-modal.css");
+@import url("components/command-palette.css");
+
+/* one file per section of the page */
+@import url("sections/about.css");
+@import url("sections/skills.css");
+@import url("sections/projects.css");
+@import url("sections/contact.css");
+
+/* last: phone layout and reduced motion */
+@import url("effects/decor.css");
+@import url("responsive.css");
+@import url("base/reduced-motion.css");

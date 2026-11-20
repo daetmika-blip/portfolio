@@ -1,0 +1,63 @@
+/* all the colors and fonts. change one here and it changes everywhere.
+   cozy forest look, taken from the reference picture: cream, leaf green, wood brown, sky blue and star yellow.
+   two looks: day (default, warm cream) and night (dusk forest). the page flips between them with <html data-theme="..."> */
+
+:root {
+  --pixel: "Fredoka", "Segoe UI", sans-serif;        /* labels, buttons, small headings */
+  --body: "Nunito", "Segoe UI", sans-serif;          /* paragraphs */
+  --serif: "Fredoka", "Segoe UI", sans-serif;        /* big titles and her name */
+  --hdr: 64px;
+}
+
+/* night. .force-night keeps the welcome screen dark even in day mode */
+html[data-theme="night"],
+.force-night {
+  --bg: #1e2a22;
+  --bg2: #243329;
+  --panel: #2b3b30;
+  --panel2: #34463a;
+  --text: #fdf0dd;
+  --muted: #b3a58f;
+  --soft: #e6d8c0;
+  --a1: #a8d37a;           /* leaf green (main accent) */
+  --a2: #9db6ee;           /* sky blue */
+  --a3: #e3a874;           /* wood */
+  --a4: #ffdc7d;           /* star yellow */
+  --border: #3d5042;
+  --ink: #131c16;
+  --btn-text: #1c2b14;     /* text color on green buttons */
+  --field: #223027;
+  --header-bg: rgba(30, 42, 34, .88);
+  --shade: 30, 42, 34;
+  --shadow: rgba(0, 0, 0, .45);
+  --crt: 0;
+  --bad: #ff7f6a;
+  --bad-text: #ff9a88;
+  --bad-shadow: #7a2f22;
+}
+
+/* day */
+html[data-theme="day"] {
+  --bg: #fdeedb;
+  --bg2: #fce9d4;
+  --panel: #fff8ee;
+  --panel2: #fff1de;
+  --text: #4a3728;
+  --muted: #8a7260;
+  --soft: #6b5443;
+  --a1: #4f8540;
+  --a2: #6c86c4;
+  --a3: #96592f;
+  --a4: #e9b84a;
+  --border: #ecd3b6;
+  --ink: #4a3728;
+  --btn-text: #fffaf0;
+  --field: #fffaf1;
+  --header-bg: rgba(253, 238, 219, .92);
+  --shade: 253, 238, 219;
+  --shadow: rgba(140, 96, 60, .22);
+  --crt: 0;
+  --bad: #cf5a43;
+  --bad-text: #b84a35;
+  --bad-shadow: #f0c2b2;
+}

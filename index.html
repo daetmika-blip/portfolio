@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mikaella C. Daet | Aspiring Data Analyst</title>
+  <meta name="description" content="Portfolio of Mikaella C. Daet: aspiring data analyst." />
+  <meta name="theme-color" content="#fdeedb" />
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="loading">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- welcome screen -->
+  <div id="loader" class="force-night" role="dialog" aria-label="Loading">
+    <div class="loader-inner">
+      <img id="loader-sprite" src="assets/images/logo.svg" alt="" width="96" height="96" />
+      <p class="loader-title">Mikaella C. Daet</p>
+      <pre id="boot-log" class="boot-log" aria-live="polite"></pre>
+      <div class="load-bar"><div id="load-fill"></div></div>
+      <p id="load-pct" class="load-pct">0%</p>
+      <button id="start-btn" class="btn" type="button" hidden>ENTER</button>
+    </div>
+  </div>
+
+  <div id="wipe" aria-hidden="true"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div id="cursor" aria-hidden="true"><div id="cursor-dot"></div><div id="cursor-ring"></div></div>
+  <div id="progress" aria-hidden="true"><span></span></div>
+
+  <header class="header" id="header">
+    <a href="#home" class="logo" data-nav><img src="assets/images/logo.svg" alt="" width="34" height="34" /><span>Mikaella</span></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <span class="nav-ind" id="nav-ind"></span>
+      <a href="#about" data-nav>About</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="btn-cmd" class="mini-btn" type="button" title="Command palette (Ctrl+K)">CMD</button>
+      <button id="btn-theme" class="mini-btn" type="button" title="Change theme">NIGHT</button>
+      <button id="btn-sound" class="mini-btn" type="button" title="Toggle sound effects" aria-pressed="false">SFX OFF</button>
+      <button id="menu-toggle" class="mini-btn menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- hero -->
+    <section id="home" class="hero">
+      
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="decor" aria-hidden="true">
+        <img class="d-cloud c1" src="assets/images/cloud.svg" alt="">
+        <img class="d-cloud c2" src="assets/images/cloud.svg" alt="">
+        <img class="d-star s1" src="assets/images/star.svg" alt="">
+        <img class="d-star s2" src="assets/images/star.svg" alt="">
+        <img class="d-star s3" src="assets/images/star.svg" alt="">
+        <img class="d-leaf l1" src="assets/images/leaf.svg" alt="">
+        <img class="d-leaf l2" src="assets/images/leaf.svg" alt="">
+      </div>
+      <div class="hero-content" id="hero-content">
+        <p class="hero-hi intro" style="--d:0">Hello, I&rsquo;m</p>
+        <h1 class="intro" id="hero-name" style="--d:1">Mikaella C. Daet</h1>
+        <h2 class="hero-role intro" style="--d:2"><span id="typing"></span><span class="cursor">_</span></h2>
+        <p class="hero-text intro" style="--d:3" id="hero-text"></p>
+        <div class="hero-buttons intro" style="--d:4">
+          <a href="#projects" class="btn" data-nav>View Projects</a>
+          <a href="#contact" class="btn btn-outline" data-nav>Get in Touch</a>
+          <button class="btn btn-ghost" id="cv-btn" type="button">Download CV</button>
+        </div>
+        <div class="socials intro" id="hero-socials" style="--d:5"></div>
+      </div>
+      <a href="#about" class="scroll-hint" data-nav aria-label="Scroll down"><span>SCROLL</span><i></i></a>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+    <!-- about -->
+    <section id="about" class="section">
+      <h2 class="section-title" data-scramble>About Me</h2>
+      <div class="about-grid">
+        <div class="avatar-wrap reveal" data-r="left">
+          <div class="avatar-frame">
+            <img id="avatar" src="assets/images/avatar.svg" alt="Mikaella C. Daet" />
+          </div>
+          <p class="avatar-tag">DATA ANALYST</p>
+        </div>
+        <div class="about-body">
+          <div class="panel terminal reveal" data-r="right">
+            <div class="term-bar"><i></i><i></i><i></i><span>mikaella@data:~</span></div>
+            <pre id="terminal" class="term-out" aria-label="Terminal intro"></pre>
+          </div>
+          <p class="bio reveal" data-r="up" id="bio" style="--i:1"></p>
+          <div class="stats reveal" data-r="up" id="stats" style="--i:2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills -->
+    <section id="skills" class="section">
+      <h2 class="section-title" data-scramble>Skills</h2>
+      <p class="lead reveal" data-r="up">What I work with. Hover a bar to see more.</p>
+      <div class="skill-list" id="skill-list"></div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="section">
+      <h2 class="section-title" data-scramble>Projects</h2>
+      <div class="filters reveal" data-r="up" id="filters" role="tablist" aria-label="Filter projects">
+        <button class="filter active" data-filter="all" role="tab" aria-selected="true">ALL <b id="c-all">0</b></button>
+        <button class="filter" data-filter="game" role="tab" aria-selected="false">ANALYSIS <b id="c-game">0</b></button>
+        <button class="filter" data-filter="website" role="tab" aria-selected="false">DASHBOARDS <b id="c-website">0</b></button>
+      </div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="section">
+      <h2 class="section-title" data-scramble>Contact</h2>
+      <div class="contact-grid">
+        <form id="contact-form" class="form reveal" data-r="left" novalidate>
+          <p class="contact-text">Want to work together, or just say hi? Send me a message.</p>
+          <label class="field">
+            <span>NAME</span>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+            <small class="err" data-for="name"></small>
+          </label>
+          <label class="field">
+            <span>EMAIL</span>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+            <small class="err" data-for="email"></small>
+          </label>
+          <label class="field">
+            <span>MESSAGE <em id="msg-count">0/500</em></span>
+            <textarea id="message" name="message" rows="5" maxlength="500" required></textarea>
+            <small class="err" data-for="message"></small>
+          </label>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+          <button type="submit" class="btn" id="send-btn"><span>SEND MESSAGE</span></button>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+        <aside class="side reveal" data-r="right">
+          <div class="panel tip">
+            <h3>HINT</h3>
+            <p>Press <kbd>Ctrl</kbd>+<kbd>K</kbd> or <kbd>/</kbd> anywhere for the command palette.</p>
+          </div>
+          <div class="panel">
+            <h3>FIND ME ON</h3>
+            <ul class="link-list" id="contact-links"></ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="grass" aria-hidden="true"></div>
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Mikaella C. Daet. Made with &hearts; and data.</p>
+    <button id="to-top" class="to-top" type="button" aria-label="Back to top">▲</button>
+  </footer>
+
+  <!-- project popup -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="m-title">
+      <button class="modal-close" type="button" data-close aria-label="Close">X</button>
+      <div class="m-thumb"><canvas id="m-canvas" width="96" height="54"></canvas></div>
+      <div class="m-body">
+        <p class="m-kind" id="m-kind"></p>
+        <h3 id="m-title"></h3>
+        <div class="tags" id="m-tags"></div>
+        <p id="m-desc" class="m-desc"></p>
+        <ul id="m-list" class="m-list"></ul>
+        <div class="m-links" id="m-links"></div>
+      </div>
+      <div class="m-nav">
+        <button type="button" id="m-prev">◀ PREV</button>
+        <button type="button" id="m-next">NEXT ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- command palette -->
+  <div id="palette" class="palette" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="pal-card" role="dialog" aria-modal="true" aria-label="Command palette">
+      <input id="pal-input" type="text" placeholder="Type a command... (go to, theme, play)" autocomplete="off" spellcheck="false" />
+      <ul id="pal-list" role="listbox"></ul>
+      <p class="pal-hint">↑ ↓ to move · Enter to run · Esc to close</p>
+    </div>
+  </div>
+
+  <div id="toasts" aria-live="polite"></div>
+
+  <noscript><p class="noscript">This portfolio needs JavaScript to run. Please enable it.</p></noscript>
+  <!-- supabase library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.js"></script>
+
+  <!-- settings and text -->
+  <script src="js/config.js"></script>
+  <script src="js/content.js"></script>
+
+  <!-- core helpers -->
+  <script src="js/core/helpers.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/core/sound.js"></script>
+  <script src="js/core/toast.js"></script>
+  <script src="js/core/dialog.js"></script>
+
+  <!-- backend -->
+  <script src="js/services/backend.js"></script>
+  <script src="js/services/auth.js"></script>
+  <script src="js/services/items.js"></script>
+  <script src="js/services/messages.js"></script>
+
+  <!-- thumbnails and effects -->
+  <script src="js/visuals/palettes.js"></script>
+  <script src="js/visuals/thumb.js"></script>
+  <script src="js/visuals/particles.js"></script>
+  <script src="js/visuals/cursor.js"></script>
+
+  <!-- page behavior -->
+  <script src="js/ui/text-effects.js"></script>
+  <script src="js/ui/page-wipe.js"></script>
+  <script src="js/ui/navigation.js"></script>
+  <script src="js/ui/reveal.js"></script>
+  <script src="js/ui/theme.js"></script>
+  <script src="js/ui/command-palette.js"></script>
+  <script src="js/ui/admin-access.js"></script>
+  <script src="js/ui/global-feel.js"></script>
+
+  <!-- sections -->
+  <script src="js/sections/hero.js"></script>
+  <script src="js/sections/about.js"></script>
+  <script src="js/sections/skills.js"></script>
+  <script src="js/sections/projects.js"></script>
+  <script src="js/sections/contact.js"></script>
+  <script src="js/sections/boot.js"></script>
+
+  <!-- starts everything, keep this last -->
+  <script src="js/main.js"></script>
+</body>
+</html>
